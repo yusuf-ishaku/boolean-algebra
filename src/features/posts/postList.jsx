@@ -6,7 +6,7 @@ import { ReactionButtons } from "./ReactionButtons";
 export const PostList = () =>{
     const posts = useSelector(state => state.posts);
     const orderedPosts = posts.slice().sort((a,b) => b.date.localeCompare(a.date));
-
+    // console.log(orderedPosts);
     const renderedPosts = orderedPosts.map(post => (
         <article className="post-excerpt" key={post.id}>
           <h3>{post.title}</h3>
@@ -18,6 +18,7 @@ export const PostList = () =>{
           </Link>
         </article>
     ));
+    
 
     return (
         <section className="posts-list">
