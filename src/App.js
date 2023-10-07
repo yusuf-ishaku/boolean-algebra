@@ -11,6 +11,8 @@ import { EditPostForm } from './features/posts/EditPostForm';
 import { Navbar } from './app/Navbar';
 import { PostList } from './features/posts/postList';
 import { AddPostForm } from './features/posts/AddPostsForm';
+import { UsersList } from "./users/UsersList.js";
+import { UserPage } from "./users/UserPage.js";
 
 function App() {
   return (
@@ -43,6 +45,8 @@ function App() {
           >
 
           </Route>
+          <Route exact path="/users" component={UsersList}/>
+          <Route exact path="/users/:userId" component={UserPage} />
           <Redirect to="/" />
         </Switch>
       </div>
