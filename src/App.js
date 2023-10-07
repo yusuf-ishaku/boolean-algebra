@@ -11,8 +11,8 @@ import { EditPostForm } from './features/posts/EditPostForm';
 import { Navbar } from './app/Navbar';
 import { PostList } from './features/posts/postList';
 import { AddPostForm } from './features/posts/AddPostsForm';
-import { UsersList } from "./users/UsersList.js";
-import { UserPage } from "./users/UserPage.js";
+import { UsersList } from "./features/users/UsersList.js";
+import { UserPage } from "./features/users/UserPage.js";
 
 function App() {
   return (
