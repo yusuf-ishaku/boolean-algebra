@@ -13,6 +13,7 @@ import { PostList } from './features/posts/postList';
 import { AddPostForm } from './features/posts/AddPostsForm';
 import { UsersList } from "./features/users/UsersList.js";
 import { UserPage } from "./features/users/UserPage.js";
+import { NotificationsList } from './features/notifications/NotificationsList';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           </Route>
           <Route exact path="/users" component={UsersList}/>
           <Route exact path="/users/:userId" component={UserPage} />
+          <Route exact path="/notifications" component={NotificationsList} />
           <Redirect to="/" />
         </Switch>
       </div>
