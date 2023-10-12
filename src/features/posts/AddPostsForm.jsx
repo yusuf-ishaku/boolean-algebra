@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { postAdded } from "./postSlice";
+import { selectAllUsers } from "../users/usersSlice";
 import { addNewPost } from "./postSlice";
 // import { nanoid } from "@reduxjs/toolkit";
 
@@ -19,7 +20,7 @@ export const AddPostForm = () =>{
     [title, content, userId].every(Boolean) && addRequestStatus === 'idle'
 
     const dispatch = useDispatch();
-    const users = useSelector(state => state.users)
+    const users = useSelector(selectAllUsers)
     const savePostClicked = async () =>{
         if(canSave){
             try{
